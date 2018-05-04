@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity2"
+    android:background="@drawable/background">
+
+
+    <Button
+        android:id="@+id/delete_button"
+        android:layout_width="105dp"
+        android:layout_height="71dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
+        android:text="Delete"
+        android:onClick="deleteid"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Post_Button"
+        android:layout_width="116dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="60dp"
+        android:onClick="postid"
+        android:text="Post"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <EditText
+        android:id="@+id/id_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="id?"
+        android:inputType="textPersonName"
+        android:text=""
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/delete_button"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="331dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="24dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/id_text"
+        tools:layout_editor_absoluteX="15dp" />
+
+    <EditText
+        android:id="@+id/post_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name?"
+        app:layout_constraintStart_toEndOf="@+id/Post_Button"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:text="Name?" />
+
+    <EditText
+        android:id="@+id/post_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Email?"
+        app:layout_constraintStart_toEndOf="@+id/Post_Button"
+        app:layout_constraintTop_toBottomOf="@+id/post_name"
+        tools:text="Email?" />
+
+    <EditText
+        android:id="@+id/post_role"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Role?"
+        app:layout_constraintStart_toEndOf="@+id/Post_Button"
+        app:layout_constraintTop_toBottomOf="@+id/post_email"
+        tools:text="Role?"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"/>
+
+    <EditText
+        android:id="@+id/put_id"
+        android:layout_width="89dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="112dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="ID?"
+        app:layout_constraintBottom_toTopOf="@+id/post_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="ID?" />
+
+    <Button
+        android:id="@+id/push_button"
+        android:layout_width="117dp"
+        android:layout_height="70dp"
+        android:onClick="pushid"
+        android:text="Push                    (ID required)"
+        app:layout_constraintStart_toStartOf="@+id/Post_Button"
+        app:layout_constraintTop_toBottomOf="@+id/Post_Button" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="464dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
