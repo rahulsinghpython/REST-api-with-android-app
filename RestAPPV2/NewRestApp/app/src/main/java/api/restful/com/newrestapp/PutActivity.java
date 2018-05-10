@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -122,6 +123,10 @@ public class PutActivity extends AppCompatActivity {
             jsonBody.put("email", email);
             jsonBody.put("role", role);
             System.out.println(jsonBody);
+            put_name.setText(jsonBody.getString("name"));
+            put_email.setText(jsonBody.getString("email"));
+            put_role.setText(jsonBody.getString("role"));
+            Toast.makeText(PutActivity.this, "The information has been edited", Toast.LENGTH_SHORT).show();
 
 
             url = url + "/" + number;
@@ -130,6 +135,7 @@ public class PutActivity extends AppCompatActivity {
 
                         @Override
                         public void onResponse(JSONObject response) {
+
                         }
                     },
 
