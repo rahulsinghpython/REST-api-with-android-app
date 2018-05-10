@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity"
+    android:background="@drawable/background_secondary"
+    android:orientation="horizontal">
+
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="83dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp"
+        android:text="Requests"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:fontFamily="monospace" />
+
+    <GridLayout
+        android:layout_width="382dp"
+        android:layout_height="364dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="19dp">
+
+        <ImageButton
+            android:id="@+id/get_button"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_column="2"
+            android:layout_row="0"
+            android:background="#90CAF9"
+            android:onClick="GetPage"
+            android:layout_gravity="end"
+            app:srcCompat="@mipmap/get_art_foreground" />
+
+        <ImageButton
+            android:id="@+id/post_button"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_column="2"
+            android:layout_row="1"
+            android:background="#0D47A1"
+            android:onClick="PutPage"
+            app:srcCompat="@mipmap/put_art_foreground" />
+
+        <ImageButton
+            android:id="@+id/push_button"
+            android:layout_width="359dp"
+            android:layout_height="90dp"
+            android:layout_column="2"
+            android:layout_row="2"
+            android:background="#90CAF9"
+            android:onClick="PushPage"
+            app:srcCompat="@mipmap/push_art_foreground" />
+
+        <ImageButton
+            android:id="@+id/delete_button"
+            android:layout_width="360dp"
+            android:layout_height="90dp"
+            android:layout_column="2"
+            android:layout_row="3"
+            android:background="#0D47A1"
+            android:onClick="DeletePage"
+            app:srcCompat="@mipmap/delete_art_foreground" />
+
+        <TextView
+            android:id="@+id/get_text"
+            android:layout_width="120dp"
+            android:layout_height="91dp"
+            android:layout_column="2"
+            android:layout_row="0"
+            android:background="#90CAF9"
+            android:fontFamily="@font/arbutus"
+            android:text="\nGet"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="25dp"
+            app:fontFamily="@font/chonburi" />
+
+        <TextView
+            android:id="@+id/post_text"
+            android:layout_width="120dp"
+            android:layout_height="90dp"
+            android:layout_column="2"
+            android:layout_row="1"
+            android:background="#0D47A1"
+            android:fontFamily="@font/chonburi"
+            android:text="\nPost"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/push_text"
+            android:layout_width="120dp"
+            android:layout_height="90dp"
+            android:layout_column="2"
+            android:layout_row="2"
+            android:fontFamily="@font/chonburi"
+            android:text="\nPut"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/delete_text"
+            android:layout_width="121dp"
+            android:layout_height="90dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_column="2"
+            android:layout_marginBottom="11dp"
+            android:layout_row="3"
+            android:background="#0D47A1"
+            android:fontFamily="@font/chonburi"
+            android:text="\nDelete"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="25sp" />
+
+
+    </GridLayout>
+
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="69dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="116dp"
+        app:srcCompat="@mipmap/cap_logo" />
+
+</RelativeLayout>

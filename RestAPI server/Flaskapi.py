@@ -27,10 +27,9 @@ class Employee(db.Model):
         self.email = email
         self.role = role
 
-
 class UserSchema(ma.Schema):
     class Meta:
-        fields = ('name', 'email', 'role')
+        fields = ('name', 'email', 'role', 'id')
 
 
 user_schema = UserSchema()
@@ -47,8 +46,9 @@ def add_user():
 
     db.session.add(new_user)
     db.session.commit()
+    print(jsonify(new_user.name, new_user.email, new_user.role))
 
-    return jsonify(new_user.name, new_user.email, new_user.role)
+    return user_schema.jsonify(new_user)
 
 
 @app.route("/employee", methods=["GET"])
@@ -58,10 +58,19 @@ def get_user():
     return jsonify(result.data)
 
 
+@app.route("/employee/all", methods=["GET"])
+def get_all_user():
+    all_users = Employee.query.all()
+    result = users_schema.dump(all_users)
+    return jsonify(result.data)
+
+
 @app.route("/employee/<id>", methods=["GET"])
 def user_detail(id):
     user = Employee.query.get(id)
     return user_schema.jsonify(user)
+
+
 
 
 @app.route("/employee/<id>", methods=["PUT"])
@@ -92,4 +101,3 @@ db.create_all()
 
 if __name__ == '__main__':
     app.run(debug=True)
-    

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PutActivity"
+    android:background="@drawable/background_secondary">
+
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="83dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp"
+        android:text="PUT \nRequest"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:fontFamily="monospace" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="405dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true">
+
+
+        <LinearLayout
+            android:layout_width="224dp"
+            android:layout_height="147dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="0dp"
+            android:orientation="vertical"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="0dp">
+
+            <TextView
+                android:id="@+id/put_name"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:hint="\nOld name" />
+
+            <TextView
+                android:id="@+id/put_email"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:hint="\nOld Email" />
+
+            <TextView
+                android:id="@+id/put_role"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:hint="\nOld Role" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="117dp"
+            android:layout_height="147dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:orientation="vertical"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp">
+
+
+            <EditText
+                android:id="@+id/put_new_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Name?"
+                android:inputType="textNoSuggestions|textPersonName" />
+
+            <EditText
+                android:id="@+id/put_new_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Email?"
+                android:inputType="textEmailAddress" />
+
+            <EditText
+                android:id="@+id/put_new_role"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Role?"
+                android:inputType="textPersonName" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/put_id"
+            android:layout_width="76dp"
+            android:layout_height="51dp"
+            android:layout_centerInParent="true"
+            android:ems="10"
+            android:textSize="30sp"
+            android:inputType="number"
+            android:text="1"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/put_add"
+            android:layout_width="54dp"
+            android:layout_height="35dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="137dp"
+            android:background="@mipmap/add_art"
+            android:onClick="increaseputid"/>
+
+        <Button
+            android:id="@+id/put_minus"
+            android:layout_width="54dp"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="142dp"
+            android:background="@mipmap/minus_art"
+            android:onClick="decreaseputid"/>
+
+        <Button
+            android:id="@+id/retrieve_button"
+            android:layout_width="111dp"
+            android:layout_height="63dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="53dp"
+            android:background="@mipmap/started_button"
+            android:text="Retrieve"
+            android:textColor="@android:color/white"
+            android:onClick="put_retrieve"/>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="116dp"
+            android:layout_height="62dp"
+            android:layout_alignTop="@+id/retrieve_button"
+            android:layout_toEndOf="@+id/put_id"
+            android:text="New Information"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_toRightOf="@+id/put_id" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="116dp"
+            android:layout_height="62dp"
+            android:layout_alignBottom="@+id/retrieve_button"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="17dp"
+            android:text="Old Information"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="17dp" />
+
+        <Button
+            android:id="@+id/put_submit"
+            android:layout_width="166dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="66dp"
+            android:background="@mipmap/started_button"
+            android:text="Submit"
+            android:textColor="@android:color/white"
+            android:onClick="putSubmit"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
